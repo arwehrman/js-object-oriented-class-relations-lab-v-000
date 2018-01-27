@@ -33,6 +33,9 @@ class Trip {
     if(driver){
       this.driverId = driverId
     }
+    if(passenger){
+      this.passengerId = passengerId
+    }
 
 
     // insert in the user to the store
@@ -40,5 +43,8 @@ class Trip {
   }
   setDriver(driver){
     this.driverId = driver.id
+  }
+  setPassenger(passenger){
+    this.passengerId = passengerId
   }
 }
