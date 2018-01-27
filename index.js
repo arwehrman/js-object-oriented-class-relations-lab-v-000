@@ -9,6 +9,7 @@ class Driver {
     // insert in the driver to the store
     store.drivers.push(this)
   }
+
   trips() {
     return store.trips.filter(trip => {
       return trip.driverId === this.id;
