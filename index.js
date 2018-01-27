@@ -9,13 +9,13 @@ class Driver {
     // insert in the driver to the store
     store.drivers.push(this)
   }
-
+  //returns all trips of driver
   trips() {
     return store.trips.filter(trip => {
       return trip.driverId === this.id;
     });
   }
-
+  //returns all passengers that a drivers has taken
   passengers() {
     return this.trips().map(trip => {
       return trip.passenger();
@@ -32,11 +32,11 @@ class Passenger {
     // insert in the passenger to the store
     store.passengers.push(this)
   }
-
+  //returns all trips a passenger has taken
   trips() {
     return store.trips.filter(trip => { return trip.passengerId === this.id; });
   }
-
+  //returns all drivers a passenger has taken trip with
   drivers() {
     return this.trips().map(trip => {
       return trip.driver()
@@ -59,12 +59,13 @@ class Trip {
     // insert in the trip to the store
     store.trips.push(this)
   }
+  //return driver associated with trip
   driver() {
     return store.drivers.find(driver => {
       return driver.id === this.driverId;
     });
   }
-
+  //return passenger associated with trip
   passenger() {
     return store.passengers.find(passenger => {
       return passenger.id === this.passengerId;
