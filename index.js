@@ -34,7 +34,11 @@ class Trip {
       this.driverId = driverId
     }
 
+
     // insert in the user to the store
     store.trips.push(this)
+  }
+  setDriver(driver){
+    this.driverId = driver.id
   }
 }
