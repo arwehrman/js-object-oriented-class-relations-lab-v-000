@@ -29,9 +29,18 @@ class Passenger {
   constructor(name){
     this.id = ++passengerId
     this.name = name
-
-    // insert in the user to the store
+    // insert in the passenger to the store
     store.passengers.push(this)
+  }
+
+  trips() {
+    return store.trips.filter(trip => { return trip.passengerId === this.id; });
+  }
+
+  drivers() {
+    return this.trips().map(trip => {
+      return trip.driver()
+    })
   }
 }
 
