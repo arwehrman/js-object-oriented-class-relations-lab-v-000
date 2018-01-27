@@ -34,7 +34,8 @@ class Passenger {
   }
   //returns all trips a passenger has taken
   trips() {
-    return store.trips.filter(trip => { return trip.passengerId === this.id; });
+    return store.trips.filter(trip => {
+      return trip.passengerId === this.id; });
   }
   //returns all drivers a passenger has taken trip with
   drivers() {
