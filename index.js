@@ -59,10 +59,13 @@ class Trip {
     // insert in the trip to the store
     store.trips.push(this)
   }
-  setDriver(driver){
-    this.driverId = driver.id
+  driver() {
+    return store.drivers.find(driver => {
+      return driver.id === this.driverId;
+    });
   }
-  setPassenger(passenger){
-    this.passengerId = passenger.id
+
+  passenger() {
+    return store.passengers.find(passenger => { return passenger.id === this.passengerId; });
   }
 }
