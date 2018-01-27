@@ -56,7 +56,7 @@ class Trip {
     if(passenger){
       this.passengerId = passengerId
     }
-    // insert in the user to the store
+    // insert in the trip to the store
     store.trips.push(this)
   }
   setDriver(driver){
