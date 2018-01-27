@@ -23,3 +23,15 @@ class Passenger {
     store.passengers.push(this)
   }
 }
+
+let tripId = 0
+
+class Trip {
+  constructor(name){
+    this.id = ++tripId
+    this.name = name
+
+    // insert in the user to the store
+    store.trips.push(this)
+  }
+}
