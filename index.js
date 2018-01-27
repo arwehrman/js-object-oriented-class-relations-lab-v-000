@@ -30,6 +30,9 @@ class Trip {
   constructor(name){
     this.id = ++tripId
     this.name = name
+    if(driver){
+      this.driverId = driverId
+    }
 
     // insert in the user to the store
     store.trips.push(this)
